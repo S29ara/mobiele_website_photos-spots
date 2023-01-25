@@ -312,7 +312,6 @@ hr {
     z-index: 2;
 }
 
-
 /*intro tekst homepagina met vormen*/
 .vormenovertekst {
     margin: 1em;
@@ -365,28 +364,19 @@ hr {
     background-color: #3F807F; 
 }
 
-.intro-peoplepage h1 {
+.intro-peoplepage h1, .intro-architecturepage h1 {
+    font-family: 'roc-grotesk', Arial, Helvetica, sans-serif;
+    font-weight: 500;
     margin: 0;
     padding-left: 1em;
+    font-style: normal;
     color: #ffffff;
 }
 
-.intro-peoplepage img {
+.intro-peoplepage img, .intro-architecturepage img {
     width: 40px;
     height: auto;
 }
-
-.intro-architecturepage h1 {
-    margin: 0;
-    padding-left: 1em;
-    color: #ffffff;
-}
-
-.intro-architecturepage img {
-    width: 40px;
-    height: auto;
-}
-
 
 /* bron code: https://www.youtube.com/watch?v=rnhoY5Cdmy0*/
 /*architecture & people image gallery*/
@@ -572,7 +562,8 @@ hr {
 
 .frame-tomwaits-page h2 {
     font-size: 1.3em;
-    font-family: 'avenir';
+    font-family: 'roc-grotesk';
+    font-weight: 500;
     color: #7950bf;
     margin: 0;
 }
@@ -654,7 +645,8 @@ iframe {
 
 .frame-dedam-page h2 {
     font-size: 1.3em;
-    font-family: 'avenir';
+    font-family: 'roc-grotesk';
+    font-weight: 500;
     color: #3F807F;
     margin: 0;
 }
@@ -700,7 +692,7 @@ iframe {
 .pencil-icon {
     position: absolute;
     bottom: 230px;
-    left: 280px;
+    left: 290px;
     width: 25px;
     height: auto;
 }
@@ -715,8 +707,9 @@ iframe {
 }
 
 .profile-card h2 {
-    font-family: 'avenir', Arial, Helvetica, sans-serif;
+    font-family: 'roc-grotesk', Arial, Helvetica, sans-serif;
     font-size: 1.5em;
+    font-weight: 500;
 }
 
 .profile-card p {
