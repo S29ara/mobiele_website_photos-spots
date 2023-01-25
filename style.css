@@ -503,7 +503,7 @@ hr {
 .tomwaits-photo {
     position: relative;
     background-color: #3F807F;
-    background-image: url(../images/popstarinamsterdam.jpeg);
+    background-image: url(/images/popstarinamsterdam.jpeg);
     background-size: cover;
 
     padding-top: 150px;
@@ -642,7 +642,6 @@ iframe {
 }
 
 /* de dam photo page*/
-
 .dedam-photo {
     position: relative;
     background-color: #3F807F;
