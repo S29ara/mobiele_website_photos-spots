@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotospotsAmsterdam</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ggb0pfi.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ggb0pfi.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.png" class="logo" alt="logo"></a>
+        <a href="#"><img src="images/profiel_foto.png" class="profile-button" alt="profile button"></a>
+        <!--hamburger icon-->
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamburger" for="side-menu"><span class="hamb-line"></span></label>
+        <!--menu-->
+        <nav>
+            <ul class="menu-homepage"> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="art.html">art</a></li>
+                <li><a href="myaccount.html">My account</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container-myaccount">
+            <a href="index.html"><img src="images/pijlwit_rechts.svg" class="terugknop-account-page" alt="white arrow button"></a>
+            <div class="profile-card">
+                <img src="images/cover-img-2.jpg" class="cover-pic" alt="cover image">
+                <img src="images/portrait_student.jpg" class="profile-pic" alt="profile picture"> 
+                <h1>Rosanna Phillips</h1>
+                <img src="images/aanpasicoon.svg" class="pencil-icon" alt="pencil icon">
+                <h2>Rosanna Phillips</h2>
+                <p>'I love to take pictures of streetfashion and street-art.'</p>
+            </div>
+        </div>
+        
+        <div class="accordion-myprofile">
+            <input type="checkbox" name="collapse" id="accordion1" class="hidecontent">
+            <label for="accordion1">My photo's</label>
+            <div class="myprofile-content hidecontent">
+                <p>Date: 26/01/2023</p>
+                <img src="images/cover_img.jpg" alt="my saved images">
+            </div>
+        </div>
+        
+        <div class="accordion-myprofile">
+            <input type="checkbox" id="accordion2" class="hidecontent">
+            <label for="accordion2">My saved locations</label>
+            <div class="myprofile-content hidecontent">
+                <p>Hazenstraat:</p>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1lXkd4d5R7MTDRP9ENyB7fOZf2jYAUtM&ehbc=2E312F" width="300" height="280"></iframe>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="container-footer">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/"><img src="images/instaicoon.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="images/facebookicoon.png" alt="Facebook"></a>
+        </div>
+        <div class="footer-text">
+            <p>Website made by Sara</p>
+        </div>
+    </footer>
+</body>
+</html>

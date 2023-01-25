@@ -1,0 +1,855 @@
+@font-face {
+    font-family: 'avenirregular';
+    src: url(fonts/avenirregular.ttf);
+}
+
+@font-face {
+    font-family: 'avenirblack';
+    src: url(fonts/avenirblack.ttf);
+}
+
+@font-face {
+    font-family: 'rockybilly';
+    src: url(fonts/Rockybilly.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: auto 0;
+    padding: 0;
+}
+
+
+/*hamburger menu code bron: https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/ */
+/*responsive website 375x667*/
+@media screen and (max-width: 375px){
+    
+/*sticky footer code bron: dlo https://dlo.mijnhva.nl/d2l/le/content/437009/viewContent/1483495/View*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 667px;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px -2px black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.profile-button {
+    float: right;
+    width: 50px;
+    margin: 1em; 
+}
+
+.logo {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    margin: 1em 5em 1em 6em;
+}
+
+
+ul {
+    list-style: none;
+    font-family: 'avenirregular',Arial, Helvetica, sans-serif;
+}
+
+
+nav {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    max-height: 0;
+    text-align: center;
+    transition: max-height .4s ease-in-out;
+}
+
+.menu-homepage a {
+    display: block;
+    padding: 30px;
+    color: black;
+    text-decoration: none;
+    border-top: 1px solid #000000;
+}
+
+.hamburger {
+    float: left;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 20px;
+}
+
+.hamb-line::before, .hamb-line::after {
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: -5px;
+}
+
+.hamb-line::after {
+    top: 5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked ~ nav {
+    max-height: 70%;
+    text-align: center;
+    position: sticky;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px -2px black;
+}
+
+
+.side-menu:checked ~ .hamburger .hamb-line {
+    background: transparent;
+}
+
+
+.side-menu:checked ~ .hamburger .hamb-line::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.side-menu:checked ~ .hamburger .hamb-line::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+
+main {
+    flex-grow: 1;
+}
+
+h1 {
+    text-align: center;
+    padding: 0.5em 2em 0.5em 2em;
+    margin-top: 1em;
+    font-family: 'roc-grotesk', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-style: normal;
+}
+
+
+h2{
+    text-align: center;
+    padding: 0.2em 2em 0.2em 2em;
+    font-weight: 600;
+    font-size: 1.2em;
+    font-style: normal;
+    font-family: 'avenirregular', Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+
+h3 {
+    font-family: 'avenirbold', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.3em;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    margin-bottom: 1em;
+}
+
+
+h4 {
+    font-family: 'avenirblack',Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.intro-text-small {
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 0.5em 0em 0em 0em;
+}
+
+hr {
+    display: block;
+    margin: 1.5em 2em 1.5em 2em;
+    border-style: dashed;
+    border-width: 1px;
+    color: #000000;
+}
+
+/*categories clickable images homepage*/
+.gallery-scroll-homepage {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.container-homepage {
+    position: relative;
+    flex-wrap: nowrap;
+    gap: 1em;
+    padding: 0 0 30px 30px;
+}
+
+.gallery-scroll-homepage img {
+    z-index: 0;
+    margin: 0.5em;
+    width: 200px;
+    height: 220px;
+    border-radius: 20px;
+    flex: 0 0 auto; 
+}
+
+/*schaduw vlak categories images*/
+.gallery-scroll-homepage .container-homepage:nth-child(1) img:not(.pijlicoon-homepage img) {
+    box-shadow: -10px 12px 0 #3F807F; 
+}
+
+.gallery-scroll-homepage .container-homepage:nth-child(2) img:not(.pijlicoon-homepage img) {
+    box-shadow: -10px 12px 0 #7950bf; 
+}
+
+.gallery-scroll-homepage .container-homepage:nth-child(3) img:not(.pijlicoon-homepage img) {
+    box-shadow: -10px 12px 0 #3F807F; 
+}
+
+.gallery-scroll-homepage .container-homepage:nth-child(4) img:not(.pijlicoon-homepage img) {
+    box-shadow: -10px 12px  0 #7950bf; 
+}
+
+/*categories tekst dubbel font*/
+.textoverimage {
+    z-index: 20;
+    top: 25%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.pijlicoon-homepage img {
+    position: absolute;
+    border-radius: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    top: 55%;
+    left: 65%;
+    margin: 0;
+}
+
+.architecturetext1 {
+    position: absolute;
+    color: #ffffff;
+    bottom: 7%;
+    left: 2%;
+    z-index: 1;
+}
+
+.architecturetext2 {
+    color: #3F807F;
+    z-index: 2;
+}
+
+.peopletext1 {
+    position: absolute;
+    z-index: 100;
+    color: #ffffff;
+    bottom: 7%;
+    left: 4%;
+    z-index: 1;
+}
+
+.peopletext2 {
+    color: #7950bf;
+    z-index: 2;
+}
+
+.naturetext1 {
+    position: absolute;
+    z-index: 100;
+    color: #ffffff;
+    bottom: 7%;
+    left: 4%;
+    z-index: 1;
+}
+
+.naturetext2 {
+    color: #3F807F;
+    z-index: 2;
+}
+
+.art-text1 {
+    position: absolute;
+    color: #ffffff;
+    bottom: 6%;
+    left: 5%;
+    z-index: 1;
+}
+
+.art-text2 {
+    color: #7950bf;
+    z-index: 2;
+}
+
+
+/*intro tekst homepagina met vormen*/
+.vormenovertekst {
+    margin: 1em;
+    position: relative;
+}
+
+.first-text-homepage {
+    top: 20px;
+    left: 10px;
+}
+
+.vormenovertekst .circle1-homepage {
+    position: absolute;
+    width: 80px;
+    top: -1em;
+    left: 2em; 
+}
+
+.vormenovertekst .circle2-homepage {
+    position: absolute;
+    width: 60px;
+    top: -1em;
+    right: 3em;
+}
+
+.vormenovertekst .circle3-homepage {
+    position: absolute;
+    width: 70px;
+    top: 2em;
+    left: 6em;
+}
+
+
+/*architecture & people page layout*/
+.intro-peoplepage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin: 0;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: #7950bf;
+}
+
+.intro-architecturepage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin: 0;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: #3F807F; 
+}
+
+.intro-peoplepage h1 {
+    margin: 0;
+    padding-left: 1em;
+    color: #ffffff;
+}
+
+.intro-peoplepage img {
+    width: 40px;
+    height: auto;
+}
+
+.intro-architecturepage h1 {
+    margin: 0;
+    padding-left: 1em;
+    color: #ffffff;
+}
+
+.intro-architecturepage img {
+    width: 40px;
+    height: auto;
+}
+
+
+/* bron code: https://www.youtube.com/watch?v=rnhoY5Cdmy0*/
+/*architecture & people image gallery*/
+.photo-gallery  {
+    position: relative;
+    --gap: 15px;
+    --num-cols: 2;
+    --row-height: 190px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid-1 {
+    width: 190px;
+    height: 190px;
+}
+
+.image-grid-2 {
+    width: 200px;
+    height: 170px;
+}
+
+
+.image-grid-3 {
+    width: 170px;
+    height: 180px;
+}
+
+.image-grid-4 {
+    width: 210px;
+    height: 200px;
+}
+
+.image-grid-5 {
+    width: 200px;
+    height: 180px;
+}
+
+.image-grid-6 {
+    width: 200px;
+    height: 160px;
+}
+
+.photo-gallery img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px 0px black;
+}
+
+/*plus knop voor images gallery*/
+.plus-knop1 img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 120px;
+    top: 300px;
+    border-radius: 0;
+}
+
+.plus-knop2 img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 300px;
+    top: 300px;
+    border-radius: 0;
+}
+
+.plus-knop3 img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 120px;
+    top: 500px;
+    border-radius: 0;
+}
+
+.plus-knop4 img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 300px;
+    top: 520px;
+    border-radius: 0;
+}
+
+.plus-knop5 img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 120px;
+    top: 710px;
+    border-radius: 0;
+}
+
+.plus-knop6 img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 300px;
+    top: 690px;
+    border-radius: 0;
+}
+
+/*Tom Waits information photo page*/
+.tomwaits-photo {
+    position: relative;
+    background-color: #3F807F;
+    background-image: url(../images/popstarinamsterdam.jpeg);
+    background-size: cover;
+
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.terugknop-tomwaits-page {
+    width: 60px;
+    top: 20px;
+    left: 10px;
+    transform: rotate(180deg);
+    position: absolute;
+}
+
+.tomwaits-photo h1, 
+.dedam-photo h1 {
+    font-family: 'rockybilly';
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.column-tomwaits-page p, 
+.column-dam-page p {
+    -webkit-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2em;
+    column-gap: 2em;
+    -webkit-column-rule: 1px solid #ccc;
+    column-rule: 1px solid #ccc;
+
+    font-family: 'avenirregular', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding: 0em 0.5em 0em 0.5em;
+}
+
+.photo-claudevanheye  {
+    width: 190px;
+    border-radius: 20px;
+    height: auto;
+    margin: 1em 5em 1em 5em;
+    box-shadow: 0px 2px 3px #7950bf;
+}
+
+.column-tomwaits-page h3, .column-dam-page h3 {
+    font-family: 'avenirregular', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: left;
+    padding: 0.5em 0.5em 0em 0.5em;
+    margin: 0;
+}
+
+.column-tomwaits-page h4, .column-dam-page h4 {
+    font-family: 'avenirbold', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: left;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.frame-tomwaits-page, .frame-dedam-page {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px 50px 0 0;
+    transform: translateY(-50px);
+    padding: 1em;
+}
+
+.frame-tomwaits-page h2 {
+    font-size: 1.3em;
+    font-family: 'avenir';
+    color: #7950bf;
+    margin: 0;
+}
+
+.bron-claudevanheye, .edvanelsken-bron {
+    font-family: 'avenir', Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    padding: 0em 0.5em 0em 0.5em;
+    margin: 0;
+}
+
+.spraypaint {
+    width: 150px;
+    opacity: 50%;
+    transform: rotate(170deg);
+    top: -10px;
+    position: absolute;
+}
+
+.flexbox-map-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexbox-map-icons img:nth-of-type(1) {
+    width: 18px;
+    height: auto;
+    margin: 0em 0em 0.5em 2em;
+}
+
+
+.flexbox-map-icons img:nth-of-type(2) {
+    width: 30px;
+    height: 30px;
+    margin: 0em 0em 0.5em 1em;
+}
+
+
+.flexbox-map-icons p {
+    font-family: 'avenir', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0em 0em 0em 0.5em;
+    margin: 0;
+}
+
+.checker {
+    display: block;
+    margin: 0em 0em 0em 5em;
+    width: 25px;
+    height: 25px;
+    background-image: url(images/saveicon.svg);
+    background-repeat: no-repeat;
+}
+
+#trigger:checked + .checker {
+    background-image: url(images/saveicon_selected.svg);
+}
+
+#trigger {
+    display: none;
+}
+
+iframe {
+    margin: 0em 2em 1em 2em;
+}
+
+/* de dam photo page*/
+
+.dedam-photo {
+    position: relative;
+    background-color: #3F807F;
+    background-image: url(images/paleisopdedam.jpg);
+    background-size: cover;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.frame-dedam-page h2 {
+    font-size: 1.3em;
+    font-family: 'avenir';
+    color: #3F807F;
+    margin: 0;
+}
+
+.photo-edvanelsken{
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    margin: 1em 6em 1em 6em;
+    box-shadow: 0px 2px 3px #3F807F;
+}
+
+/*profile*/
+/*bron profile layout code: https://www.youtube.com/watch?v=dED5dJ58BSg*/
+.container-myaccount {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.cover-pic {
+    display: block;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 140px;
+    border-radius: 100%;
+    margin-top: -70px;
+    box-shadow: 0px 0px 0px 3px #4825cc;
+}
+
+.pencil-icon {
+    position: absolute;
+    bottom: 230px;
+    left: 280px;
+    width: 25px;
+    height: auto;
+}
+
+.profile-card h1 {
+    position: absolute;
+    font-family: 'rockybilly', Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.2em;
+    top: 140px;
+    left: 30px;
+}
+
+.profile-card h2 {
+    font-family: 'avenir', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.profile-card p {
+    font-family: 'avenir', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    padding: 0em 0em 0.5em 0em;
+    margin: 0em 1em 0em 1em;
+}
+
+.terugknop-account-page{
+    position: absolute;
+    width: 40px;
+    left: 20px;
+    bottom: 530px;
+
+}
+
+/* bron accordion code : https://www.stechies.com/create-accordion-html-without-javascript/*/
+.hidecontent {
+    display: none;
+}
+
+.accordion-myprofile label {
+    box-shadow: 0 0  20px #d4d4d4;
+    display: block;
+    padding: 1em;
+    margin: 0.5em 0em 0.5em 0em;
+    cursor: pointer;
+
+    background: #4825cc;
+    font-family: 'avenir',Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: left;
+    color: white;
+    transition: ease .5s;
+}
+
+.accordion-myprofile label::before{
+    content: '+';
+    margin: 0em 1em 0em 1em;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.myprofile-content img {
+    width: 80%;
+    max-width: 100%;
+    margin: 1em 1em 0em 2em;
+    border-radius: 20px;
+}
+
+.myprofile-content {
+    box-shadow: 0 0 20px #d4d4d4;
+    background: #ffffff;
+    padding: 2em 1em 2em 1em;
+    border: 1px solid #ffffff;
+    margin: 0.5em;
+}
+
+.myprofile-content p{
+    font-family: 'avenir',Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 0.5em;
+}
+
+.myprofile-content iframe {
+    padding: 0;
+    margin: 0em 1em 1em 1em;
+}
+
+
+.accordion-myprofile input:checked + label +.myprofile-content {
+    display: block;
+    -webkit-animation: fadeIn 0.5s ease-out;
+    -moz-animation: fadeIn 0.5s ease-out;
+    -o-animation: faeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.accordion-myprofile input[type="checkbox"]:checked +label::before {
+    content: '-';
+}
+
+/*footer*/
+footer {
+    padding: 0.5em;
+    background-color: black;
+    color: #ffffff;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.footer-text {
+    font-family: 'avenirregular',Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    margin: 1.5em;
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto;
+    margin: 0.5em 0 0.5em 0.5em;
+    padding: 0;
+}
+
+.social-icons {
+    display: flex;
+    align-self: center;
+    justify-self: start;
+}
+
+/*bronnen images:  https://images0.persgroep.net/rcs/SY3DveJ6cSxs2_u70fiJ37xV_S0/diocontent/130560160/_crop/0/0/640/640/_fitwidth/763?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.8&desiredformat=webp 
+                   https://cms-assets.nporadio.nl/npoRadio2/archief/ANP-9432175.jpg?mtime=20210718222435&focal=none
+                   https://www.ebbes.nl/wp-content/uploads/2020/04/Ebbesfotografie%C2%AECorona_Amsterdam_Damrak_Stil-op-straat-3299.jpg
+                   https://images0.persgroep.net/rcs/EVBYbn-wfMQKBZ7ZJC8lewvuyD4/diocontent/177920867/_fitwidth/1240?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.9&desiredformat=webp
+                   https://www.assets.avrotros.nl/user_upload/_processed_/4/9/csm_Ed-van-der-Elsken---Man-met-sigaret_fffb1e9359.jp
+                   https://res.cloudinary.com/dsvessvkt/image/upload/t_artwork_detailed_tablet/dpr_2/f_auto/v1564826479/production/artworks/kh7m3xq3lfi5aqotufir.jpg
+                   https://images0.persgroep.net/rcs/N2azITBGYWU79LqDcrN4OtRjTec/diocontent/63565413/_crop/0/0/900/604/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8&desiredformat=webp
+                   https://2.bp.blogspot.com/-_dD9j7N2z5M/W2_9BYgWs3I/AAAAAAABGs8/JeolI4aT560d_M9D9t31-2nqCGAVF3X0QCLcBGAs/s640/De%2BDam%252C%2B1971-1972.jpeg
+                   https://images0.persgroep.net/rcs/K3fzqxEp6DyDmVUtftDjxPOhAeo/diocontent/161524550/_fitwidth/1240?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.9
+                   https://images.kunstveiling.nl/tmp-0383b7115d294ffffdd4c1f23f11ac6b-eva-besnyo_d2600.jpeg
+                   https://i.pinimg.com/564x/3d/fa/b7/3dfab772d7a06c0b26dfc789e14d57fd.jpg
+                   https://www.dupho.nl/component/joomgallery/image?view=image&format=raw&type=orig&id=395
+                   https://www.amsterdam.nl/publish/pages/1013991/amsterdamse_bos_ongedateerd.jpg
+                   https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Ed_van_der_Elsken.jpg/532px-Ed_van_der_Elsken.jpg*/
+}

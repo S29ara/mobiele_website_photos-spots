@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 321.69 398.47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 23px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: KlavikaBasic-Bold, 'Klavika Basic';
+        font-size: 320px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="11.5" y="11.5" width="298.69" height="298.69" rx="86.69" ry="86.69"/>
+  <text class="cls-2" transform="translate(128.82 300.97)"><tspan x="0" y="0">f</tspan></text>
+</svg>
