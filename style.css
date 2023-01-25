@@ -676,6 +676,7 @@ iframe {
 }
 
 .cover-pic {
+    z-index: 0;
     display: block;
     width: 100%;
 }
@@ -689,6 +690,7 @@ iframe {
 
 .pencil-icon {
     position: absolute;
+    z-index: 1;
     bottom: 230px;
     left: 290px;
     width: 25px;
@@ -720,6 +722,7 @@ iframe {
 
 .terugknop-account-page{
     position: absolute;
+    z-index: 1;
     width: 40px;
     left: 20px;
     bottom: 530px;
