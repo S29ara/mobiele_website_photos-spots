@@ -503,7 +503,7 @@ hr {
 .terugknop-tomwaits-page {
     width: 60px;
     top: 20px;
-    left: 10px;
+    left: 20px;
     transform: rotate(180deg);
     position: absolute;
 }
