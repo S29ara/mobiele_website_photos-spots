@@ -541,6 +541,7 @@ h4 {
     text-align: left;
     padding: 0.5em 0.5em 0em 0.5em;
     margin: 0;
+    border-top: none;
 }
 
 .column-tomwaits-page h4, .column-dam-page h4 {
